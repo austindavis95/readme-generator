@@ -9,58 +9,58 @@ const generateMarkdown = require('./utils/generateMarkdown.js');
 const questions = [
     {
         type: 'input',
-        message: 'What is the title of the project?',
+        message: 'Enter projects title.',
         name: 'title',
     },
     {
         type: 'input',
-        message: 'Which is the description?',
+        message: 'Please provide a project description.',
         name: 'description',
     },
     {
         type: 'input',
-        message: 'Which are the installation instructions?',
+        message: 'Please provide the installation instructions.',
         name: 'installation',
     },
     {
         type: 'input',
-        message: 'How is the application used?',
+        message: 'How will the application be used?',
         name: 'usage',
     },
     {
         type: 'input',
-        message: 'Which are the contribution guidelines?',
+        message: 'Please provide the contribution guidelines.',
         name: 'contributing',
     },
     {
         type: 'input',
-        message: 'How can the application be tested?',
+        message: 'How will the application be tested?',
         name: 'tests',
     },
     {
         type: 'list',
-        message: 'Which license is the application covered under?',
+        message: 'What license would you like the application covered under?',
         name: 'license',
         choices: ['The MIT License', 'GNU General Public License version 3', 'other'],
     },
     {
         type: 'input',
-        message: 'Which is the copyright year of the application (yyyy)?',
+        message: 'Enter the copyright year of the application (yyyy).',
         name: 'year',
     },
     {
         type: 'input',
-        message: 'Who is the author of the application?',
+        message: 'Enter the name of the author.',
         name: 'author',
     },
     {
         type: 'input',
-        message: 'Which is your GitHub username?',
+        message: 'Please provide a Github username.',
         name: 'github',
     },
     {
         type: 'input',
-        message: 'Which is your email address?',
+        message: 'Please provide a valid email address.',
         name: 'email',
     },
 ];
