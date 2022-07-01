@@ -1,9 +1,9 @@
-# Readme Generator 
+# expample title 
 
   
 ## Description
     
-
+example description
   
 ## Table of Contents
   
@@ -15,11 +15,11 @@
   
 ## Installation
   
-This program will work on any device with node installed.
+
   
 ## Usage
   
-This applications primary function is to automatically generate user input into READme format!
+
   
 
   
@@ -37,6 +37,6 @@ This applications primary function is to automatically generate user input into 
   
 For any quiestions about this project please contact me at:
   
-* GitHub Profile: [https://github.com/austindavis95](https://github.com/https://github.com/austindavis95)
+* GitHub Profile: [username](https://github.com/username)
   
-* email: adavis102595@yahoo.com
+* email: .gmail
