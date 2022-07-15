@@ -1,88 +1,97 @@
-// TODO: Include packages needed for this application
+
 const inquirer = require('inquirer');
 
 const fs = require('fs');
 
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input
+
 const questions = [
     {
         type: 'input',
-        message: 'Enter projects title.',
         name: 'title',
+        message: 'Enter projects title.'
+        
     },
     {
         type: 'input',
-        message: 'Please provide a project description.',
         name: 'description',
+        message: 'Please provide a project description.'
+      
     },
     {
         type: 'input',
-        message: 'Please provide the installation instructions.',
         name: 'installation',
+        message: 'Please provide the installation instructions.'
+    
     },
     {
         type: 'input',
-        message: 'How will the application be used?',
         name: 'usage',
+        message: 'How will the application be used?'
+        
     },
     {
         type: 'input',
-        message: 'Please provide the contribution guidelines.',
         name: 'contributing',
+        message: 'Please provide the contribution guidelines.'
+        
     },
     {
         type: 'input',
-        message: 'How will the application be tested?',
         name: 'tests',
+        message: 'How will the application be tested?'
+       
     },
     {
         type: 'list',
-        message: 'What license would you like the application covered under?',
         name: 'license',
-        choices: ['The MIT License', 'GNU General Public License version 3', 'other'],
+        message: 'What license would you like the application covered under?',
+        choices: ['The MIT License', 'GNU General Public License version 3', 'other']
     },
     {
         type: 'input',
-        message: 'Enter the copyright year of the application (yyyy).',
         name: 'year',
+        message: 'Enter the copyright year of the application (yyyy).'
+        
     },
     {
         type: 'input',
-        message: 'Enter the name of the author.',
         name: 'author',
+        message: 'Enter the name of the author.'
+        
     },
     {
         type: 'input',
-        message: 'Please provide a Github username.',
         name: 'github',
+        message: 'Please provide a Github username.'
+       
     },
     {
         type: 'input',
-        message: 'Please provide a valid email address.',
         name: 'email',
+        message: 'Please provide a valid email address.'
+        
     },
 ];
 
-// TODO: Create a function to write README file
+
 function writeToFile(fileName, data) {
-    //const myREADME = generateMarkdown(data);
+   
 
     fs.writeFile(fileName, generateMarkdown.generateMarkdown(data), (err) => 
         err ? console.error(err) : console.log('File successfully generated')
     );
 };
 
-// TODO: Create a function to initialize app
+
 function init() {
-    const promptQuestions = () => {
+    const askQuestions = () => {
         return inquirer.prompt(questions);
     };
 
-    promptQuestions()
-        .then((answers) => writeToFile('Sample-README.md', answers))
+    askQuestions().then((response) => writeToFile('Sample-README.md', response))
 };
 
-// Function call to initialize app
+
 init();
